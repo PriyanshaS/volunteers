@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>VOLUNTEERS</title>
+    <style>
+.row{
+  margin-top: 40px;
+
+}
+body{
+  background-color:#C0C0C0;
+}
+.card-img-top{
+width: 100%;
+height: 50vh;
+object-fit:fill;
+}
+
+
+.btn{
+  border-radius: 30px;
+  background-color: #082A46;
+  border-color: #082A46;
+  display: inline-block;
+}
+.btn:hover{
+  background-color: #04192b;
+  border-color: #082A46;
+
+}
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.card-body{
+  height: 22vh;
+  background-color:#082A46 ;
+}
+.card{
+
+  border-color:  #082A46;
+  border-left:  #082A46;
+  border-right: #082A46 ;
+  box-shadow: 0 15px 15px;
+   rgba(0,0,0,.5);
+}
+.container-fluid{
+  padding-bottom: 60px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.col {
+  padding-top: 50px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+header .logo {
+    font-size: 2.5rem;
+    color: var(--black);
+}
+
+header .navbar a {
+    font-size: 1.7rem;
+    color: var(--black);
+    margin: 0 1rem;
+}
+
+header .navbar a:hover {
+    color: var(--orange);
+}
+
+header .icons a {
+    font-size: 2.5rem;
+    color: var(--black);
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover {
+    color: var(--orange);
+}
+#menu-bar {
+    font-size: 2.5rem;
+    padding: .5rem 1.5rem;
+    border: .1rem solid var(--black);
+    color: var(--black);
+    border-radius: .3rem;
+    cursor: pointer;
+    display: none;
+}
+.service .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    background: #f9f9f9;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+
+.service .box-container .box {
+    text-align: center;
+    max-height:100px;
+}
+
+.service .box-container .box i {
+    font-size: 4rem;
+    color: var(--orange);
+}
+
+.service .box-container .box h3 {
+    font-size: 2rem;
+    color: var(--black);
+    padding-top: 1rem;
+}
+
+.service .box-container .box p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.products .box-container .box {
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: #f9f9f9;
+    flex: 1 1 30rem;
+}
+
+
+
+.products .box-container .box img {
+    height: 300px;
+    /* transform: rotate(-35deg); */
+    filter: drop-shadow(0 .5rem 1rem rgba(0, 0, 0, .1));
+    margin: 3rem 2rem;
+}
+
+
+.products .box-container .box .icons {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: .5rem;
+    left: -10rem;
+}
+
+.products .box-container .box:hover .icons {
+    left: 1rem;
+}
+
+.products .box-container .box .icons a {
+    height: 4.5rem;
+    width: 5rem;
+    line-height: 4.5rem;
+    font-size: 2rem;
+    color: var(--black);
+    border: .1rem solid var(--black);
+    border-radius: .5rem;
+    background: #fff;
+    margin-top: .5rem;
+}
+
+.products .box-container .box .icons a:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+.products .box-container .box .content h3 {
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.products .box-container .box .content .price {
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 1rem 0;
+}
+
+.products .box-container .box .content .price span {
+    color: var(--orange);
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+.products .box-container .box .content .stars {
+    padding-bottom: 1rem;
+}
+
+.products .box-container .box .content .stars i {
+    font-size: 1.7rem;
+    color: var(--orange);
+} @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,900);
+
+html,
+body {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background: #FFF;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.container-fostrap {
+  display: table-cell;
+  padding: 1em;
+  text-align: center;
+  vertical-align: middle;
+}
+.fostrap-logo {
+  width: 100px;
+  margin-bottom:15px
+}
+h1.heading {
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 900;
+  margin: 0 0 0.5em;
+  color: #505050;
+}
+@media (min-width: 450px) {
+  h1.heading {
+    font-size: 3.55em;
+  }
+}
+@media (min-width: 760px) {
+  h1.heading {
+    font-size: 3.05em;
+  }
+}
+@media (min-width: 900px) {
+  h1.heading {
+    font-size: 3.25em;
+    margin: 0 0 0.3em;
+  }
+}
+.card {
+  display: block;
+    margin-bottom: 20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    transition: box-shadow .25s;
+}
+.card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+.img-card {
+  width: 100%;
+  height:200px;
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+  display:block;
+    overflow: hidden;
+}
+.img-card img{
+  width: 100%;
+  height: 200px;
+  object-fit:cover;
+  transition: all .25s ease;
+}
+.card-content {
+  padding:15px;
+  text-align:left;
+}
+.card-title {
+  margin-top:0px;
+  font-weight: 700;
+  font-size: 1.65em;
+}
+.card-title a {
+  color: #000;
+  text-decoration: none !important;
+}
+.card-read-more {
+  border-top: 1px solid #D4D4D4;
+}
+.card-read-more {
+  text-decoration: none !important;
+  padding:5px;
+  font-weight:600;
+  text-transform: uppercase
+} </style>
+  </head>
+  <body>
+
+  <header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="index.html" class="logo">helpify</a>
+
+    <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="index.html">contact us</a>
+        <a href="index.html">about</a>
+        <a href="index.html">become a volunteer...Join us NOW</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+
+</header>
+<h1 style="color:black">Volunteers</h1>
+<section class="wrapper">
+    <div class="container-fostrap">
+
+        <div class="content">
+            <div class="container">
+                <div class="row">
+
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card">
+                            <img src="img1.jpg" />
+                          </a>
+                            <div class="card-content" style="background-color:#f5f5f5">
+                                <h4 class="card-title">
+                                  Ashley Johnson
+
+                                </h4>
+                                <p style="color:#293754">
+                                Location : Green Park ,New York
+                                </p>
+                            </div>
+                            <div class="card-read-more" style="background-color:#293754">
+                                    <p style="color:white;font-size:1.2em;">Available -12:00 PM to 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card">
+                            <img src="img2.jpg" />
+                          </a>
+                            <div class="card-content" style="background-color:#f5f5f5">
+                                <h4 class="card-title">
+                                  Brad John
+
+                                </h4>
+                                <p style="color:#293754">
+                                Location : HillTop View , New York.
+                                </p>
+                            </div>
+                            <div class="card-read-more" style="background-color:#293754">
+                                    <p style="color:white;font-size:1.2em;">Available - 9:00 AM to 3:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card">
+                            <img src="img3.jpg" />
+                          </a>
+                            <div class="card-content" style="background-color:#f5f5f5">
+                                <h4 class="card-title">
+                                  Renny George
+
+                                </h4>
+                                <p style="color:#293754">
+                                Location : Mountain Park , Houston
+                                </p>
+                            </div>
+                            <div class="card-read-more" style="background-color:#293754">
+                                    <p style="color:white;font-size:1.2em;">7:00 PM to 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card">
+                            <img src="img4.jpg" />
+                          </a>
+                            <div class="card-content" style="background-color:#f5f5f5">
+                                <h4 class="card-title">
+                                  Mike Reese
+
+                                </h4>
+                                <p style="color:#293754">
+                                Location : ChinaTown Road , Texas
+                                </p>
+                            </div>
+                            <div class="card-read-more" style="background-color:#293754">
+                                    <p style="color:white;font-size:1.2em;">Available - 11:00AM to 2:00PM only weekends</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="card">
+                            <a class="img-card">
+                            <img src="img5.jpg" />
+                          </a>
+                            <div class="card-content" style="background-color:#f5f5f5">
+                                <h4 class="card-title">
+                                  Yang Su
+
+                                </h4>
+                                <p style="color:#293754">Lui Yang
+                                Location : Barbeque City Wall , Los Angeles
+                                </p>
+                            </div>
+                            <div class="card-read-more" style="background-color:#293754">
+                                    <p style="color:white;font-size:1.2em;">Available - 6:00 PM to 8:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br><br>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+  >
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Helpify
+          </h6>
+          <p>
+            An initiative which provide people a platform to help blind people and also give them hackify coins as a reward...
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            SERVICES
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Sign In</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Volunteer</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Need help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">About</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Our Store</a>
+          </p>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@hackify.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
